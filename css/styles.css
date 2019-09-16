@@ -1,15 +1,16 @@
 /* Estilos Generales---------------------------------------------------------------------------------*/
 
-@font-face {font-family: 'Comic'; src: url("../Fonts/comic.ttf");}
+/*@font-face {font-family: 'Comic'; src: url("../Fonts/comic.ttf");}
 @font-face {font-family: 'OpenSansBol'; src: url("../Fonts/OpenSans-Bold.ttf");}
 @font-face {font-family: 'OpenSansLig'; src: url("../Fonts/OpenSans-Light.ttf");}
-@font-face {font-family: 'OpenSansSemi'; src: url("../Fonts/OpenSans-Semibold.ttf");}
+@font-face {font-family: 'OpenSansSemi'; src: url("../Fonts/OpenSans-Semibold.ttf");}*/
 
 *{
 	margin:0px;
 	padding:0px;
 	text-decoration:none;
-	font-family:'OpenSansBol';
+	/*font-family:'OpenSansBol';*/
+	font-family: 'Open Sans', Verdana;
 	color:#2c3e50;
 }
 
@@ -38,7 +39,7 @@ p{
 }
 
 .subheader{
-	font-family:'OpenSansBol';
+	/*font-family:'OpenSansBol';*/
 	font-size: 30px;
 	text-align: center;
 	margin-top: 40px;
@@ -74,7 +75,7 @@ p{
 }
 
 #logo h1{
-	font-family:'Comic';
+	/*font-family:'Comic';*/
 	font-size: 30px;
 	color:#FFF;
 	margin-left: 50px;
@@ -82,7 +83,7 @@ p{
 
 #menu{
 	float:left;
-	width: 410px;
+	width: 417px;
 }
 
 #menu ul li{
@@ -93,7 +94,7 @@ p{
 }
 
 #menu ul li a{
-	font-family:'OpenSansLig';
+	/*font-family:'OpenSansLig';*/
 	color: #FFF ;
 }
 
@@ -137,6 +138,10 @@ p{
 	background-color:rgba(26, 188, 156, 0.6);
 }
 
+#desplegable ul li a:active #desplegable{
+	margin-top: -220px;
+}
+
 /*Slider----------------------------------------------------------------------------------------*/
 
 #slider{
@@ -147,7 +152,7 @@ p{
 }
 
 #slider h2{
-	font-family: 'Comic';
+	/*font-family: 'Comic';*/
 	font-size: 40px;
 	text-align: center;
 	color: white;
@@ -197,41 +202,6 @@ p{
 	display: none;
 }
 
-.contenedor{
-	width: 60%;
-	margin: auto;
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 1%;
-	text-align: center;
-	padding-bottom: 50px;
-}
-
-.closeBoton{
-	width: 100%;
-	text-align: right;
-}
-
-.closeBoton img{
-	margin: 20px 20px;
-	cursor: pointer;
-}
-
-.contenedor h1{
-	font-family: 'Comic';
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-#fotos img{
-	width: 80%;
-	border-radius: 2%;
-}
-
-.parrafo{
-	width: 80%;
-	margin: 20px auto;
-}
-
 .service{
 	width:33%;
 	text-align: center;
@@ -250,6 +220,46 @@ p{
 .service:hover{
 	opacity:0.8;
 	transform: scale(1.1, 1.1);
+}
+
+.continente{
+	width: 100%;
+	height: 100%;
+	display: flex;            /*centrado*/
+    justify-content: center; /*horizontal*/
+    align-items: center;    /*vertical*/
+ 	background-color: rgba(255, 255, 255, 0.8);
+ }
+
+.contenido{
+	width: 60%;
+	height: auto;
+	text-align: center;
+ }
+
+.closeBoton{
+	width: 100%;
+	text-align: right;
+}
+
+.closeBoton img{
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.contenido h1{
+	/*font-family: 'Comic';*/
+	margin-bottom: 20px;
+}
+
+.foto img{
+	width: 80%;
+	border-radius: 2%;
+}
+
+.parrafo{
+	width: 80%;
+	margin: 20px auto;
 }
 
 /*Footer---------------------------------------------------------------------------------------*/
@@ -274,7 +284,7 @@ p{
 }
 
 .contacto p{
-	font-family: 'OpenSansSemi';
+	/*font-family: 'OpenSansSemi';*/
 	font-size:20px;
 	color: #FFF;
 	line-height: 40px;
@@ -319,39 +329,31 @@ p{
 	margin-top: -36px; 
 }
 
-/*#networks li:hover{
-	opacity:0.8;
-	transform: scale(1.1, 1.1);
-}*/
-
-/*.nav > li {
-	float:left;
-}*/
-
 .copyR{
 	width: 100%;
 	text-align: center;
 }
 
 .copyR p{
-	font-family: 'OpenSansLig';
+	/*font-family: 'OpenSansLig';*/
 	font-size: 14px;
 	color: #FFF;
 }
 
 /*Estilo Responsive---------------------------------------------------------------------------------*/
 
-@media all and (max-width: 1300px){
+@media all and (max-width: 1320px){
 	#logo{width:60%;}
 }
-@media all and (max-width: 1220px){
+@media all and (max-width: 1230px){
 	#logo{width:56%;}
 	.contacto .subheader{font-size: 26px;}
 	.contacto p{font-size: 17px; line-height: 36px;}
 	#networks li{margin-right: 10px;}
 }
-@media all and (max-width: 1100px){
+@media all and (max-width: 1120px){
 	#logo{width:52%;}
+	.closeBoton img{width:30px; height: 30px;}
 }
 @media all and (min-width: 621px) and (max-width: 1020px){
 	#logo{width:47%;}
@@ -361,16 +363,17 @@ p{
 	.contacto{width: 50%;}
 	#networks li{margin-right: 20px;}
 }
-@media all and (max-width: 920px){
+@media all and (max-width: 930px){
 	#menu{display:none;}
 	#botonMenu{display:block;}
+	#slider h2{font-size: 35px;}
 	.service {width: 50%;}
 }
 @media all and (max-width: 800px){
 
 }
 @media all and (max-width: 700px){
-	p{font-size:15px;}
+	p{font-size:16px;}
 	.subheader{font-size:22px;}
 	.contacto .subheader{font-size: 22px;}
 	#slider h2{font-size:30px;}
@@ -380,6 +383,7 @@ p{
 	#logo{width:65%;}
 	#logo h1{margin-left: 10px;}
 	#botonMenu{right:0px;}
+	.closeBoton img{width:20px; height: 20px;}
 }
 @media all and (max-width: 520px){
 	#logo h1{font-size: 30px; margin-left: 0px;}
@@ -391,6 +395,6 @@ p{
 	#slider h2{font-size:21px; line-height: 42px;}
 	.about, .service{width:100%;}
 }
-@media all and (max-width: 300px){
+@media all and (max-width: 320px){
 
 }
