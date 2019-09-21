@@ -10,39 +10,67 @@ $(document).ready(function(){
       evento.preventDefault();
       //Creamos el string del enlace ancla
       var codigo = "#" + $(this).data('ancla');
-      //Funcionalidad de scroll lento para el enlace ancla en 3 segundos
+      //Funcionalidad de scroll lento para el enlace ancla en 2 segundos
       $('html,body').animate({scrollTop: $(codigo).offset().top}, 2000, 'easeOutCirc');
     });
+
+
+	$('.ancla2').click(function(evento){
+      //Anulamos la funcionalidad por defecto del evento
+      evento.preventDefault();
+      //Creamos el string del enlace ancla
+      var codigo = "#" + $(this).data('ancla');
+      //Funcionalidad de scroll lento para el enlace ancla en 2 segundos
+      $('html,body').animate({scrollTop: $(codigo).offset().top}, 2000, 'easeOutCirc');
+	  //Funcionalidad de slideToggle del menu desplegable
+      $('#desplegable').slideToggle('swing');
+    });
+
+//Menu
+
+    $('#botonMenu').click(function(evento){
+    	//Anulamos la funcionalidad por defecto del evento
+    	evento.preventDefault();
+		//Funcionalidad de slideToggle del menu desplegable
+    	$('#desplegable').slideToggle('swing');
+    });  
 
 //Servicios
 
 	$('.window').click(function(){
-		
+
+		var titulo="";
 		var texto=$(this).data('window');
 		var foto="img/portfolio/" + $(this).data('window') + ".png";
 
 		if (texto==="paseo") {
-			var texto="No tiene tiempo o no puede salir a pasear con su perro, llamenos y nosotros lo recogeremos.";
+			var titulo="PASEOS";
+			var texto="No tiene tiempo o no puede salir a pasear con su perro, llámenos y nosotros lo recogeremos.";
 		}else if (texto==="comida") {
-			var texto="Se ha quedado sin comida o no puede transportar ese saco tan pesado, nosotros podemos hacerlo.";
+			var titulo="COMIDA";
+			var texto="Se ha quedado sin comida, su medicina o cualquier otro accesorio de su mascota?, nosotros podemos llevarselo a casa.";
 		}else if (texto==="vet") {
-			var texto="Las visitas al Vet. suelen ser tediosas, largas esperas, situaciones complicadas, etc. Por eso, nos ofrecemos a llevarlo por Ud.";
+			var titulo="VETERINARIO";
+			var texto="Las visitas al veterinario suelen ser tediosas, largas esperas, situaciones complicadas, etc. Por eso, nos ofrecemos a llevarlo por Ud.";
 		}else if (texto==="pelu") {
+			var titulo="PELUQUERIA";
 			var texto="Lavamos, desparasitamos, cortamos uñas y pelamos a su mascota. Recogida y entrega en su domicilio.";
 		}else if (texto==="school") {
+			var titulo="ADIESTRAMIENTO";
 			var texto="Ofrecemos un programa de educación canina que hará a su mascota más obediente y equilibrada.";
 		}else if (texto==="resi") {
+			var titulo="RESIDENCIA";
 			var texto="Proximamente sus mascotas no tendrán que quedarse solas cuando os ausenteis de casa.";
 		}
 
 
 		//alert (texto);
 		
-
+		$('.titulo').text((titulo));
 		$('.parrafo').text((texto));
 		$('#foto').attr('src', foto);
 		$('body').css('overflow', 'hidden');
-		$('#window').slideToggle('linear');
+		$('#window').slideToggle('swing');
 	});
 
 	$('.closeBoton').click(function(){
