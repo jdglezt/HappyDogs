@@ -16,6 +16,7 @@
 
 body{
 	background: white;
+	overscroll-behavior: contain; /* Evitas que se refresque la pagina cuando deslizas hacia abajo */
 }
 
 p{
