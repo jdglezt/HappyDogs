@@ -4,7 +4,7 @@
 	"short_name": "HappyDogs",
 	"description": "Cuidamos de su mascota, cuando no puedas hacerlo",
 	"background_color": "#FFF",
-	"theme_color": "#1abc9c",
+	"theme_color": "#2c3e50",
 	"orientation": "portrait",
 	"display": "standalone",
 	"scope": "./",

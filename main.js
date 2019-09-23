@@ -11,7 +11,7 @@ $(document).ready(function(){
       //Creamos el string del enlace ancla
       var codigo = "#" + $(this).data('ancla');
       //Funcionalidad de scroll lento para el enlace ancla en 2 segundos
-      $('html,body').animate({scrollTop: $(codigo).offset().top}, 2000, 'easeOutCirc');
+      $('html,body').animate({scrollTop: $(codigo).offset().top}, 1500, 'easeOutCirc');
     });
 
 
@@ -21,7 +21,7 @@ $(document).ready(function(){
       //Creamos el string del enlace ancla
       var codigo = "#" + $(this).data('ancla');
       //Funcionalidad de scroll lento para el enlace ancla en 2 segundos
-      $('html,body').animate({scrollTop: $(codigo).offset().top}, 2000, 'easeOutCirc');
+      $('html,body').animate({scrollTop: $(codigo).offset().top}, 1500, 'easeOutCirc');
 	  //Funcionalidad de slideToggle del menu desplegable
       $('#desplegable').slideToggle('swing');
     });
