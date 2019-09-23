@@ -36,7 +36,7 @@ p{
 
 .anclas{
 	width:100%;
-	height:120px;
+	height:119px;
 }
 
 .subheader{
@@ -53,6 +53,8 @@ p{
 	transition: opacity 0.3s, transform 0.3s;
 	transition-timing-function: ease-in-out;
 }
+
+.disabled{pointer-events: none;}
 
 /*Cabecera------------------------------------------------------------------------------------------*/
 
@@ -396,4 +398,7 @@ p{
 }
 @media all and (max-width: 320px){
 
+}
+@media handheld {
+	.disabled{pointer-events: auto;}
 }
